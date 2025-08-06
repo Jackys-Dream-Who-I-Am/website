@@ -505,25 +505,25 @@ input, select, textarea {
 			}
 
 			.logo-img {
-			width: 220px; /* Standardgröße für Desktop */
+			width: 220px; 
 			
 			}
 
 			@media (max-width: 768px) {
 				.logo-img {
-					width: 40px; /* kleinere Größe für Tablets und Smartphones */
+					width: 40px; 
 					overflow: hidden;
 				}
 			}
 
 			@media (max-width: 480px) {
 				.logo-img {
-					width: 20px; /* noch kleiner für kleine Smartphones */
+					width: 20px; 
 					overflow: hidden;
 				}
 			}
 
-			/* New-Button implementation */
+			/* New-Button  */
 			.button.icon-button {
 			background-color: #d5d6fe;
 			border-radius: 50%;
@@ -745,6 +745,157 @@ input, select, textarea {
 
 		}
 
+/* Form */
+
+	form {
+		margin: 0 0 2em 0;
+	}
+
+		form > :last-child {
+			margin-bottom: 0;
+		}
+
+		form > .fields {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			width: calc(100% + 3em);
+			margin: -1.5em 0 2em -1.5em;
+		}
+
+			form > .fields > .field {
+				-moz-flex-grow: 0;
+				-webkit-flex-grow: 0;
+				-ms-flex-grow: 0;
+				flex-grow: 0;
+				-moz-flex-shrink: 0;
+				-webkit-flex-shrink: 0;
+				-ms-flex-shrink: 0;
+				flex-shrink: 0;
+				padding: 1.5em 0 0 1.5em;
+				width: calc(100% - 1.5em);
+			}
+
+				form > .fields > .field.half {
+					width: calc(50% - 0.75em);
+				}
+
+				form > .fields > .field.third {
+					width: calc(100%/3 - 0.5em);
+				}
+
+				form > .fields > .field.quarter {
+					width: calc(25% - 0.375em);
+				}
+
+		@media screen and (max-width: 480px) {
+
+			form > .fields {
+				width: calc(100% + 2em);
+				margin: -1em 0 2em -1em;
+			}
+
+				form > .fields > .field {
+					padding: 1em 0 0 1em;
+					width: calc(100% - 1em);
+				}
+
+					form > .fields > .field.half {
+						width: calc(100% - 1em);
+					}
+
+					form > .fields > .field.third {
+						width: calc(100% - 1em);
+					}
+
+					form > .fields > .field.quarter {
+						width: calc(100% - 1em);
+					}
+
+		}
+
+	label {
+		display: block;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="search"],
+	input[type="url"],
+	select,
+	textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		color: #39454b;
+		display: block;
+		width: 100%;
+		padding: 0.65em 0.75em;
+		background: none;
+		border: solid 2px #e5e6e7;
+		color: inherit;
+		border-radius: 0.5em;
+		outline: none;
+	}
+
+		input[type="text"]:focus,
+		input[type="password"]:focus,
+		input[type="email"]:focus,
+		input[type="tel"]:focus,
+		input[type="search"]:focus,
+		input[type="url"]:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #9ac8e9;
+		}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	input[type="tel"],
+	input[type="search"],
+	input[type="url"],
+	select {
+		line-height: 1.35em;
+	}
+
+	textarea {
+		min-height: 8em;
+	}
+
+	::-moz-focus-inner {
+		border: 0;
+	}
+
+	::-webkit-input-placeholder {
+		opacity: 0.375;
+	}
+
+	:-moz-placeholder {
+		opacity: 0.375;
+	}
+
+	::-moz-placeholder {
+		opacity: 0.375;
+	}
+
+	:-ms-input-placeholder {
+		opacity: 0.375;
+	}
+
+
 /* Icons */
 
 	ul.icons {
@@ -763,6 +914,55 @@ input, select, textarea {
 			text-align: center;
 			border: 0;
 		}
+
+/* Image */
+
+	.image {
+		position: relative;
+		display: inline-block;
+	}
+
+		
+		.image:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: url("C:/Users/Opoce/JackyWebsite/images/fulls/05.png");
+		}
+
+		.image img {
+			display: block;
+			width: 100%;
+		}
+
+		.image.featured {
+			display: block;
+			width: 100%;
+			margin: 0 0 2em 0;
+		}
+
+		.image.fit {
+			display: block;
+			width: 100%;
+		}
+
+		.image.left {
+			float: left;
+			margin: 0 2em 2em 0;
+		}
+
+		.image.centered {
+			display: block;
+			margin: 0 0 2em 0;
+		}
+
+			.image.centered img {
+				margin: 0 auto;
+				width: auto;
+			}
 
 /* Sections/Article */
 
@@ -1849,7 +2049,6 @@ input, select, textarea {
   height: 100vh;
 }
 
-/* Container, der nur den sichtbaren Bereich zeigt */
 .slider1-container {
   width: 100%;
   height: 100%;
@@ -1860,15 +2059,15 @@ input, select, textarea {
   z-index: 0;
 }
 
-/* Die Slider-Leiste (Track) mit allen Bildern nebeneinander */
+
 .slider1 {
   display: flex;
-  width: 300%; /* Bei 3 Bildern */
+  width: 300%; /* for 3 pictures */
   height: 100%;
   transition: transform  0.5s ease;
 }
 
-/* Einzelne Slides */
+
 .slider1 img {
   width: 100vw;
   height: 100vh;
@@ -1876,7 +2075,7 @@ input, select, textarea {
   flex-shrink: 0;
 }
 
-/* Inhalt darüber */
+
 #landintro .content {
   position: relative;
   z-index: 1;
@@ -1942,21 +2141,21 @@ input, select, textarea {
 	transform: translateX(0);
 	}
 
-	/* Deaktiviere Animationen auf Mobilgeräten (z. B. Bildschirme kleiner als 768px) */
+	/* Deaktiviere animationen on mobile devices */
 	@media only screen and (max-width: 767px) {
 		.intro-text {
-			opacity: 1; /* Element direkt sichtbar */
-			transform: translateX(0); /* Keine Transformation */
-			transition: none; /* Animation deaktivieren */
+			opacity: 1; 
+			transform: translateX(0); 
+			transition: none; 
 		}
 
 		.intro-right,
 		.intro-left {
-			transform: translateX(0); /* Transformation aufheben */
+			transform: translateX(0); 
 		}
 
 		.intro-text.visible {
-			transition: none; /* Animation deaktivieren */
+			transition: none; 
 		}
 	}
 
@@ -2035,7 +2234,7 @@ input, select, textarea {
   background-color: #6b69d6;
 }
 
-/* Kontaktformular Layout-Anpassung */
+
 .contact-form {
   margin-top: 2rem;
 }
@@ -2123,30 +2322,30 @@ input, select, textarea {
 /* Mobile-Overrides */
 @media (max-width: 768px) {
   .logo-title {
-    justify-content: center; /* Logo zentriert */
+    justify-content: center; /* Logo centered */
     margin-top: 0.5rem;
-    gap: 0.25rem; /* ggf. kleinerer Abstand */
+    gap: 0.25rem; 
 	overflow: hidden;
   }
 
   .logo-title img {
-    height: 30px;  /* kleineres Logo auf Mobilgeräten */
+    height: 30px;  
 	overflow: hidden;
   }
 }
 		
 
-/* Grundlegende Stile für die Sektion */
+
 /*  About Section */
 .about-section {
     display: flex;
-    flex-direction: column; /* Inhalt untereinander */
-    align-items: center;     /* horizontal zentriert */
-    justify-content: center; /* vertikal zentriert */
+    flex-direction: column; 
+    align-items: center;     
+    justify-content: center; 
     padding: 10px;
     min-height: 80vh;
-    background-color: #bbc4aa;													/* FARBE ABOUT HIER */
-    text-align: center;      /* Text zentrieren */									
+    background-color: #bbc4aa;													
+    text-align: center;      									
 }
 
 /* Text-Container */
@@ -2173,7 +2372,7 @@ input, select, textarea {
 .about-text {
     opacity: 1; 
     transform: none;
-    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+    transition: all 0.8s ease-in-out 0.2s; 
 }
 
 .about-text a {
@@ -2218,7 +2417,7 @@ input, select, textarea {
 }
 
 
-/* Bild-Container */
+/* Img-Container */
 .image-container {
     flex: 1;
     max-width: 40%;
@@ -2227,24 +2426,24 @@ input, select, textarea {
 .about-image {
     width: 100%;
     height: auto;
-    opacity: 0; /* Start: unsichtbar für Animation */
-    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
-    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+    opacity: 0; 
+    transform: translateX(100%); 
+    transition: all 0.8s ease-in-out; 
 }
 
-/* Klasse, die bei Scroll hinzugefügt wird */
+
 .about-heading.active,
 .about-text.active {
     opacity: 1;
-    transform: translateX(0); /* Überschrift und Text fahren von links ein */
+    transform: translateX(0); 
 }
 
 .about-image.active {
     opacity: 1;
-    transform: translateX(0); /* Bild fährt von rechts ein */
+    transform: translateX(0); 
 }
 
-/* Responsivität für kleinere Bildschirme */
+
 @media (max-width: 768px) {
     .about-section {
         flex-direction: column;
@@ -2259,13 +2458,13 @@ input, select, textarea {
     .image-container {
         max-width: 100%;
         margin-bottom: 20px;
-        order: -1; /* Bild wird oben angezeigt */
+        order: -1; 
     }
     
     .about-heading,
     .about-text,
     .about-image {
-        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        transform: translateX(0); 
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
     }
@@ -2278,7 +2477,7 @@ input, select, textarea {
 }
 
 
-/*  Experience Section */
+
 .experience-section {
     display: flex;
     align-items: center;
@@ -2289,7 +2488,7 @@ input, select, textarea {
 	;
 }
 
-/* Text-Container */
+
 .text-container {
     flex: 1;
     max-width: 50%;
@@ -2297,45 +2496,45 @@ input, select, textarea {
 }
 
 .experience-heading {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
+    opacity: 0; 
+    transform: translateX(-100%); 
     transition: all 0.8s ease-in-out;
 }
 
 .experience-text {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
-    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+    opacity: 0; 
+    transform: translateX(-100%); 
+    transition: all 0.8s ease-in-out 0.2s; 
 }
 
-/* Bild-Container */
+
 .image-container {
     flex: 1;
     max-width: 40%;
-	margin-right: -50px;	/*Bild schließt bündig mit Seitenrand */
+	margin-right: -50px;	
 }
 
 .experience-image {
     width: 100%;
     height: auto;
-    opacity: 0; /* Start: unsichtbar für Animation */
-    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
-    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+    opacity: 0; 
+    transform: translateX(100%); 
+    transition: all 0.8s ease-in-out; 
 }
 
-/* Klasse, die bei Scroll hinzugefügt wird */
+
 .experience-heading.active,
 .experience-text.active {
     opacity: 1;
-    transform: translateX(0); /* Überschrift und Text fahren von links ein */
+    transform: translateX(0); 
 }
 
 .experience-image.active {
     opacity: 1;
-    transform: translateX(0); /* Bild fährt von rechts ein */
+    transform: translateX(0); 
 }
 
-/* Responsivität für kleinere Bildschirme */
+
 @media (max-width: 768px) {
     .experience-section {
         flex-direction: column;
@@ -2350,14 +2549,14 @@ input, select, textarea {
     .image-container {
         max-width: 100%;
         margin-bottom: 20px;
-        order: -1; /* Bild wird oben angezeigt */
-		margin-left: -50px;	/*Bild wieder mittig */
+        order: -1; 
+		margin-left: -50px;	
     }
     
     .experience-heading,
     .experience-text,
     .experience-image {
-        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        transform: translateX(0); 
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
     }
@@ -2381,22 +2580,22 @@ input, select, textarea {
 	background-color: #ebe2d7;
 }
 
-/* Bild-Container */
+
 .image-container {
     flex: 1;
     max-width: 40%;
-	margin-left: -50px;	/*Bild schließt bündig mit Seitenrand */
+	margin-left: -50px;	/*Img close to page corner */
 }
 
 .day-image {
     width: 100%;
     height: auto;
-    opacity: 0; /* Start: unsichtbar für Animation */
-    transform: translateX(-100%); /* Start: links außerhalb des Sichtfelds */
-    transition: all 0.8s ease-in-out; /* Sanfte Animation */
+    opacity: 0; 
+    transform: translateX(-100%); 
+    transition: all 0.8s ease-in-out; 
 }
 
-/* Text-Container */
+
 .text-container {
     flex: 1;
     max-width: 50%;
@@ -2404,30 +2603,30 @@ input, select, textarea {
 }
 
 .day-heading {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
+    opacity: 0; 
+    transform: translateX(100%); 
     transition: all 0.8s ease-in-out;
 }
 
 .day-text {
-    opacity: 0; /* Start: unsichtbar */
-    transform: translateX(100%); /* Start: rechts außerhalb des Sichtfelds */
-    transition: all 0.8s ease-in-out 0.2s; /* Leichte Verzögerung für den Text */
+    opacity: 0; 
+    transform: translateX(100%); 
+    transition: all 0.8s ease-in-out 0.2s; 
 }
 
-/* Klasse, die bei Scroll hinzugefügt wird */
+
 .day-image.active {
     opacity: 1;
-    transform: translateX(0); /* Bild fährt von links ein */
+    transform: translateX(0);
 }
 
 .day-heading.active,
 .day-text.active {
     opacity: 1;
-    transform: translateX(0); /* Überschrift und Text fahren von rechts ein */
+    transform: translateX(0); 
 }
 
-/* Responsivität für kleinere Bildschirme */
+
 @media (max-width: 768px) {
     .day-section {
         flex-direction: column;
@@ -2437,7 +2636,7 @@ input, select, textarea {
     .image-container {
         max-width: 100%;
         margin-bottom: 20px;
-		margin-right: -50px;	/*Bild wieder zentral */
+		margin-right: -50px;	
     }
     
     .text-container {
@@ -2447,7 +2646,7 @@ input, select, textarea {
     
     .day-heading,
     .day-text {
-        transform: translateX(0); /* Keine seitliche Animation auf Mobilgeräten */
+        transform: translateX(0); 
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
     }
@@ -2628,15 +2827,15 @@ input, select, textarea {
   overflow: hidden;
   max-width: 500px;
   width: 100%;
-  height: 300px; /* Wichtig */
+  height: 300px; 
   border-radius: 1rem;
 }
 
 .packages-image.slider .slides {
   display: flex;
   transition: transform 0.5s ease;
-  height: 100%; /* Wichtig */
-  width: 100%; /* z. B. bei 3 Bildern */
+  height: 100%; 
+  width: 100%; 
   transform: none;
 }
 
@@ -2644,8 +2843,8 @@ input, select, textarea {
   flex-shrink: 0;
   flex-basis: 100%;
   width: 100%;
-  height: 100%; /* Wichtig */
-  object-fit: cover; /* oder cover */
+  height: 100%; 
+  object-fit: cover; 
   border-radius: 0;
   background-color: #fff;
 }
@@ -2704,7 +2903,7 @@ input, select, textarea {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: stretch; /* Wichtig */
+  align-items: stretch; 
   gap: 2rem;
   margin: 2rem 0;
   flex-wrap: wrap;
@@ -2714,7 +2913,7 @@ input, select, textarea {
 .host-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Bild füllt Container und schneidet ggf. Überstände */
+  object-fit: cover; 
   max-width: 420px;
   opacity: 0;
   transform: translateX(0);
@@ -2723,8 +2922,8 @@ input, select, textarea {
 
 .host > img {
   flex: 1 1 auto;
-  height: auto; /* Wird gleich ersetzt */
-  align-self: stretch; /* Wichtig, um Höhe des Texts anzunehmen */
+  height: auto; 
+  align-self: stretch; 
 }
 
 .host-text {
@@ -2736,7 +2935,7 @@ input, select, textarea {
 }
 
 
-/* Animationen */
+/* Animation */
 .from-left.show {
   transform: translateX(0);
   opacity: 1;
@@ -2755,7 +2954,7 @@ input, select, textarea {
   transform: translateX(100px);
 }
 
-/* MOBIL: Übereinander */
+/* MOBIL: On top of each other */
 @media (max-width: 768px) {
   .host {
     flex-direction: column;
@@ -2783,7 +2982,7 @@ input, select, textarea {
   text-align: justify;
 }
 
-/* MOBIL: Übereinander statt nebeneinander */
+/* MOBIL: on top of each other not next to each other */
 @media (max-width: 768px) {
   .host {
     flex-direction: column;
@@ -2797,9 +2996,9 @@ input, select, textarea {
   }
 }
 
-/* Headerbild - vor Packages */
+/* Headerbild - before packages */
 .hero {
-  background-image: url('../../images/Gallery/ChoosePackageNew.jpg'); /* Pfad anpassen */
+  background-image: url('../../images/Gallery/ChoosePackageNew.jpg'); 
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -2819,7 +3018,7 @@ input, select, textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* dunkler Overlay für bessere Lesbarkeit */
+  background: rgba(0, 0, 0, 0.4); 
   z-index: 1;
 }
 
@@ -2899,7 +3098,7 @@ input, select, textarea {
   opacity: 1;
 }
 
-							/* Navigation Dots */
+	/* Navigation Dots */
 .slider-nav {
   position: absolute;
   bottom: 30px;
