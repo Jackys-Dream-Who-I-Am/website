@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
 
-/*
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -190,11 +184,11 @@ input, select, textarea {
 /* Type */
 
 	body, input, textarea, select {
-		font-family: "Montserrat", "sans-serif";			/* SCHRIFT VERÄNDERN HIER */
+		font-family: "Montserrat", "sans-serif";			
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
-		color: #39454b;									/* SCHRITFTFARBE VERÄNDERN */
+		color: #39454b;									
 		letter-spacing: 0.025em;
 	}
 
@@ -590,54 +584,6 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
-/* Image */
-
-	.image {
-		position: relative;
-		display: inline-block;
-	}
-
-		
-		.image:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background: url("C:/Users/Opoce/JackyWebsite/images/fulls/05.png");
-		}
-
-		.image img {
-			display: block;
-			width: 100%;
-		}
-
-		.image.featured {
-			display: block;
-			width: 100%;
-			margin: 0 0 2em 0;
-		}
-
-		.image.fit {
-			display: block;
-			width: 100%;
-		}
-
-		.image.left {
-			float: left;
-			margin: 0 2em 2em 0;
-		}
-
-		.image.centered {
-			display: block;
-			margin: 0 0 2em 0;
-		}
-
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
 
 /* List */
 
@@ -2982,9 +2928,9 @@ input, select, textarea {
 /*BUTTON */
 
 #mein-button {
-  background-color: #8785e6; /* Lila Hintergrund */
-  font-family: "Montserrat", "sans-serif";		/* SCHRIFT VERÄNDERN HIER */
-  color: white;             /* Weißer Text */
+  background-color: #8785e6; 
+  font-family: "Montserrat", "sans-serif";		
+  color: white;             
   border: none;
   padding: 16px 32px;
   font-size: 22px;
@@ -2994,15 +2940,15 @@ input, select, textarea {
   transition: background-color 0.3s ease;
   text-decoration: none;
 
-  display: inline-flex;         /* Flexbox für bessere Zentrierung */
-  align-items: center;          /* Vertikale Zentrierung */
-  justify-content: center;      /* Horizontale Zentrierung */
-  line-height: 1.2;             /* Bessere Zeilenhöhe */
+  display: inline-flex;         
+  align-items: center;          
+  justify-content: center;      
+  line-height: 1.2;             
   text-align: center;
 }
 
 #mein-button:hover {
-  background-color: #fec065; /* Orange bei Hover */
+  background-color: #fec065; /* Orange Hover */
   transform: scale(1.05);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
@@ -3015,7 +2961,7 @@ input, select, textarea {
   }
 }
 
-/* NEUE RETREAT INTRO */
+/* RETREAT INTRO */
 
 .retreat-introNew {
 	display: flex;
@@ -3059,7 +3005,7 @@ input, select, textarea {
 	}
 }
 
-
+/*end*/
 #ende {
   display: flex;
   justify-content: center;   /* horizontal zentrieren */
